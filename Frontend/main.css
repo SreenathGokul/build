@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Hover Effects */
+.navbar .nav-links a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #ff6600;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+  display: flex;
+  height: 100vh; /* Full screen height */
+}
+
+/* Left Column: Image */
+.left-column {
+  flex: 1;
+  background-color: #0f0d0d; /* Optional background color */
+}
+
+.left-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Column: Content */
+.right-column {
+  flex: 1;
+  background-color: rgba(177, 196, 196, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: rgb(74, 152, 221);
+  justify-content: flex-start;
+}
+
+.right-column p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.head {
+  font-size: larger;
+  font-weight: bolder;
+  color: rgba(85, 131, 129, 255);
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 768px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .left-column {
+    height: 50vh; /* Adjust height for mobile */
+  }
+}
+
+/* second div */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Two Column Layout */
+.two-column-layout1 {
+  display: flex;
+  height: 100vh; /* Full screen height */
+}
+
+/* Left Column: Image */
+.left-column1 {
+  flex: 1;
+  background-color: #0f0d0d; /* Optional background color */
+}
+
+.left-column1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Column: Content */
+.right-column1 {
+  flex: 1;
+  background-color: rgba(23, 65, 106, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: rgb(74, 152, 221);
+  justify-content: flex-start;
+}
+
+.right-column1 p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.head1 {
+  font-size: larger;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 768px) {
+  .two-column-layout {
+    flex-direction: column;
+  }
+
+  .left-column {
+    height: 50vh; /* Adjust height for mobile */
+  }
+}

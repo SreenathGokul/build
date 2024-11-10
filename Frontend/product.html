@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products and Companies</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+   
+   body {
+        font-family: "Roboto", sans-serif;
+        background-image: url("../Asset/background image product.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+      h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #ff6600;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .location-select {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      select {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 25px;
+        border: 2px solid #ff6600;
+        outline: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      select:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+      .product-card {
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 320px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 1px solid #ddd;
+        position: relative;
+      }
+      .product-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .product-details {
+        padding: 20px;
+        text-align: center;
+      }
+      .product-details h3 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        color: #444;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+      }
+      .product-details p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+      .product-card button {
+        background: linear-gradient(45deg, #ff6600, #ff8533);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+      .product-card button:hover {
+        background: linear-gradient(45deg, #ff8533, #ff6600);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .product-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+        pointer-events: none;
+      }
+    </style>
+     <script>
+      function showLocation() {
+        var location = document.getElementById("locationDropdown").value;
+        document.getElementById("singanallur").style.display = location === "singanallur" ? "block" : "none";
+        document.getElementById("ramanathapuram").style.display = location === "ramanathapuram" ? "block" : "none";
+        document.getElementById("sulur").style.display = location === "sulur" ? "block" : "none";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Available Companies and Their Addresses</h2>
+    <div class="location-select">
+      <select id="locationDropdown" onchange="showLocation()">
+        <option value="">-- Select Location --</option>
+        <option value="singanallur">Singanallur</option>
+        <option value="ramanathapuram">Ramanathapuram</option>
+        <option value="sulur">Sulur</option>
+      </select>
+    </div>
+    <div id="singanallur" class="product-container" style="display: none;">
+     <h1>Singanallur</h1>
+
+    <div class="product-container">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        
+        <div class="product-details">
+          <h3>ESWARAN & CO</h3>
+          <p>
+            Address:11 R V L COLONY W RD, KAKKAN NAGAR GSTIN(33AAJPE3376L1ZL)
+            COIMBATORE – 641005
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI VELLINGIRI ANDAVAR TRADERS</h3>
+          <p>
+            Address:BYEPASS,KERALA – SALEM HIGHWAY (RHR HOTEL)
+            GSTIN(33AECFS7404L1ZY) COIMBATORE – 641111
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 3 (Add more as needed) -->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI IYYAPA EARTHMOVERS DEMOLITION AND BUILDING MATERIALS</h3>
+          <p>
+            Address: NO 6 A,NGR PURAM,IRUGUR,COIMBATORE 641103
+            GSTIN(33CEIPM6432G2ZJ)
+          </p>
+        </div>
+      </div>
+      <!--product carsd 4-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI LAKSHMI TRADERS</h3>
+          <p>
+            Address: NO 114 A PATTANAM,ONDIPUDUR,COIMBATORE – 641016
+            GSTIN(33BCBPS2875K1ZA)
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 4-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI GANESHA ENGINEERING</h3>
+          <p>Address: ONDIPUDUR,COIMBATORE 641016 GSTIN(33AXZPK4869MIZE)</p>
+        </div>
+      </div>
+      <!--product carsd 5-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI VINAYAGA BUILDING MATERIAL &EARTHMOVER</h3>
+          <p>
+            Address: 9/50, NRTHAJI STREET, EDAYARPALAYAM, VELLORE, COIMBATORE –
+            641111
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 6-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI GANESHA ENGINEERING</h3>
+          <p>Address: ONDIPUDUR,COIMBATORE 641016 GSTIN(33AXZPK4869MIZE)</p>
+        </div>
+      </div>
+
+      <!--product carsd 7-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>DEVI AND CO</h3>
+          <p>Address: 2231, TRICHY RD, SINGANALLUR, TAMIL NADU 641005</p>
+        </div>
+      </div>
+
+      <!--product carsd 8-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>VIJAY LAKSHMI HARDWARE & PLYWOOD</h3>
+          <p>
+            Address: 358, TRICHY RD, OPPOSITE SHANTHI SOCIAL SERVICES MEDICAL
+            CENTRE, AGRAHARAM, COIMBATORE, SINGANALLUR, TAMIL NADU 641005
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 9-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MAHADEV ELECTRICALS</h3>
+          <p>
+            Address: SHOP NO. 530, TRICHY RD, OPPOSITE INDIAN BANK - SINGANALLUR
+            BRANCH, AGRAHARAM, SINGANALLUR, TAMIL NADU 641005
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 10-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SIVASAKTHI HARDWARES & ELECTRICALS</h3>
+          <p>
+            Address: 581 -A,TRICHY ROAD, OPP UZHAVAR SANTHAI, SINGANALLUR,
+            COIMBATORE, TAMIL NADU 641005
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 11-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>KADAMBAM HARDWARES</h3>
+          <p>Address:2224, TRICHY RD, SINGANALLUR, TAMIL NADU 641005</p>
+        </div>
+      </div>
+
+      <!--product carsd 12-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>VIKRAMS HARDWARE</h3>
+          <p>TRICHY RD, KOTHARI LAYOUT, COIMBATORE, TAMIL NADU 641015</p>
+        </div>
+      </div>
+
+      <!--product carsd 13-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SIVAGAMI HARDWARES</h3>
+          <p>12/646, KAMARAJAR RD, SINGANALLUR, TAMIL NADU 641015</p>
+        </div>
+      </div>
+
+      <!--product carsd 14-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SARASWATHI ELECTRICALS AND HARDWARE</h3>
+          <p>411, TRICHY RD, AGRAHARAM, SINGANALLUR, TAMIL NADU 641005</p>
+        </div>
+      </div>
+
+      <!--product carsd 15-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MOHAMMADI TRADERS</h3>
+          <p>
+            8 RAJAJI NAGAR , TRICHY ROAD SINGANALLUR, PO, COIMBATORE, TAMIL NADU
+            641005
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <div id="ramanathapuram" class="product-container" style="display: none;">
+    <h1> Ramanathapuram</h1>
+    <div class="product-container">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        
+        <div class="product-details">
+          <h3>MRS TRACTORS</h3>
+          <p>
+            CHETTIPALAYAM RD, L&T BYE PASS RD, PODANUR,COIMBATORE – 641023
+         GSTIN(33BJQPS3655D1ZZ)
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>TREND CREATORS BUILDERS AND CONSORTIUM</h3>
+          <p>
+            NO 43, CARMEL NAGAR METTUR CHURCH ROAD, PODANUR, COIMBATORE - 641023 (NEAR MOUNT CARMEL CHURCH)
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 3 (Add more as needed) -->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>ANANDA CONSTRUCTION ENGINEER</h3>
+          <p>
+            NO.110, NEHRU NAGAR, RAMANATHAPURAM COIMBATORE, COIMBATORE - 641045 (NEAR 80 FEET ROAD)
+          </p>
+        </div>
+      </div>
+      <!--product carsd 4-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI AMUDHALAKSHMI HARDWARES AND AGENCIES</h3>
+          <p>
+            TRICHY RD, RAMASAMY NAGAR, RAMANATHAPURAM
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 4-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI GANESHA ENGINEERING</h3>
+          <p>Address: ONDIPUDUR,COIMBATORE 641016 GSTIN(33AXZPK4869MIZE)</p>
+        </div>
+      </div>
+      <!--product carsd 5-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SACHIN HARDWARES</h3>
+          <p>
+            240,ANGANNAN STREET,80 FEET RD,VOC NAGAR, RAMANATHAPURAM
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 6-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MAHARAJA HARDWARE</h3>
+          <p>Address: 76/106, PANKAJA MILLS RD, PALANIAPPAN AGAR , SOWRIPALAYAM PRIVU
+            RAMANATHAPURAM
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 7-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>RAMA HARDWARE</h3>
+          <p>Address: 88, NANJUNDAPURARAM RD,BHARATHI NAGAR, RAMANATHAPURAM</p>
+        </div>
+      </div>
+
+      <!--product carsd 8-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI LAKSHMI TRADERS</h3>
+          <p>
+            Address: NO 153 – K ,PANKAJA MILLA RD,RAMASAMY NAGAR,
+            RAMANATHAPURAM
+            
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 9-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI VIGNESWARA HARDWARES</h3>
+          <p>
+            Address: PANKAJ, 5/125,MILL RD , RAMANATHAPURAM
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 10-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>PREMIER HARDWARE</h3>
+          <p>
+            Address: 95,PANKAJA MILLS RD,PALANIAPPA NAGAR, SOWRIPALAYAM PIRIVU
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 11-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SAI AGENCY</h3>
+          <p>Address:410, NANJUNDAPURAM RD, PAPAMMAL LAYOUT
+            RAMANATHAPURAM
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 12-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SHREE VIGNESHWARA HARDWARES</h3>
+          <p>1935,TRICHY ROAD,NAGAPPAN STREET,INDIAN BANK AND RHR HOTEL BACKSIDE,SOWRIPALAYAM PIRIVU,RAMANATHAPURAM</p>
+        </div>
+      </div>
+
+      <!--product carsd 13-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>DHIVYAM TRADERS</h3>
+          <p>Address:292,MRG BUILDING,PULIAKULAM RD,PULIAKULAM
+            RAMANATHAPURAM
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 14-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MARUDHAM HARDWARES</h3>
+          <p>Address:NO 5,PANKAJA MILLS RD,PULIAKULAM,COIMBATORE
+            BABA PAINTS AND HARD WARES
+            584 – 288, SOWRIPALAYAM RD, PULIAKULAM, RAMANATHAPURAM
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 15-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>R.P ELECTRICALS AND HARDWARES</h3>
+          <p>
+            Address: NO 1140 - A,TRICHY RD,CHINTHAMANI ,RUKMANI NAGAR,RAMANTHAPURAM
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="sulur" class="product-container" style="display: none;">
+      <h1> Sulur</h1>
+    <div class="product-container">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        
+        <div class="product-details">
+          <h3>MOOKAMBIKA BRICKS</h3>
+          <p>
+            Address:GSTIN(33ABWFM5260H1ZX)
+            1/477 – D,NEELMBUR AVINASHI ROAD COIMBATORE- 641062
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SLV AGENCIES AND CONSULTANCY</h3>
+          <p>
+           Address: 56,SLV COMPLEX,SHOP NO 2,MULLAI NAGAR,SULUR,COIMBATORE-641402 GSTIN(33ABOPS6456M1ZV)
+          </p>
+        </div>
+      </div>
+
+      <!-- Product Card 3 (Add more as needed) -->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SKV SOLIDS AND STONES</h3>
+          <p>
+            Address: NO 2, THIRUCHENDUR MURUGAN NAGAR TRICHY ROAD, SULUR, COIMBATORE - 641402 (OPPOSITE KUMARAN KOTTAMMURUGAN TEMPLE)
+            GSTIN : 33BSOPB6992B1ZQ
+            
+          </p>
+        </div>
+      </div>
+      <!--product carsd 4-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI RANGA ELECTRICALS</h3>
+          <p>
+            Address: 203, TRICHY RD, COIMBATORE, SULUR, TAMIL NADU 641402
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 4-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>ADITHYA LANDS & HOMES</h3>
+          <p>Address: NO 23-K3, KALANGAL ROAD, SULUR, COIMBATORE - 641402 (NEAR SULUR FIRE STATION)
+            GSTIN : 33AMUPM2259B2Z
+           </p>
+        </div>
+      </div>
+      <!--product carsd 5-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MOOKAMBIKA BRICKS</h3>
+          <p>
+           Address: 1/477-D, NEELMBUR AVINASHI ROAD, NEELAMBUR, COIMBATORE - 641062 (NEAR INDIAN OIL PETROL BUNK)
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 6-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>. SRI ELLAMMAL HARDWEARS</h3>
+          <p>Address: NO:6, SGR COMPLEX, ARUL JOTHI NAGAR, KANNAMPALAYAM ROAD, RANGANATHAPURAM, SULUR, TAMIL NADU 641402
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 7-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MADHU HARDWARES</h3>
+          <p>Address: 459/1 NALLA THANEER THOTTAM, KEERANATHAM ROAD, SARAVANAMPATTI, COIMBATORE - 641035 (NEAR CRI PUMPS)</p>
+        </div>
+      </div>
+
+      <!--product carsd 8-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SKP HARDWARES</h3>
+          <p>
+            Address: TRICHY RD, SULUR, TAMIL NADU 641402
+            
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 9-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>VENKATALAXSHMI ELECTRICALS</h3>
+          <p>
+            Address: 24GF+5MF, COIMBATORE ROAD, SULUR, TAMIL NADU 641402
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 10-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>ANANDHA TRADERS</h3>
+          <p>
+            Address: NEAR S M BAKERY, RANGANATHAPURAM, SULUR, TAMIL NADU 641402
+          </p>
+        </div>
+      </div>
+
+      <!--product carsd 11-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRINIVASA ELECTRICAL AND HARDWARES</h3>
+          <p>Address:2/208-8, SULUR RALIWAY FEEDER ROAD KURUMBAPALAYAM, MUTHUGOUNDAN PUDUR POST SULUR, PIRIVU, NEAR LRT, COIMBATORE, TAMIL NADU 641402
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 12-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>NJP ELECTRICALS & HARDWARE</h3>
+          <p>Address: 249H+P73, KALANGAL RD, SULUR, TAMIL NADU 641402</p>
+        </div>
+      </div>
+
+      <!--product carsd 13-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>SRI THIRUMURUGAN TRADERS</h3>
+          <p>Address:4/137A, MUTHUGOUNDENPUDUR FLYOVER, SULUR, TAMIL NADU 641402
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 14-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>MAHADEV TILES & ELECTRICALS</h3>
+          <p>Address:204-205, NEAR BUS STAND,SULUR, TRICHY RD, COIMBATORE, TAMIL NADU 641402
+            </p>
+        </div>
+      </div>
+
+      <!--product carsd 15-->
+      <div class="product-card">
+        <div class="product-details">
+          <h3>KRISHNA GLASS & PLYWOOD</h3>
+          <p>
+            Address: 24F5+G64, NAGAPATTINAM - COIMBATORE - GUNDLUPET HWY, SULUR, TAMIL NADU 641402</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </body>
+</html>

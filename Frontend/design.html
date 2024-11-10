@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Designs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        padding-top: 50px;
+      }
+
+      img {
+        max-width: 80%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .container {
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        display: inline-block;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Your House Designs</h2>
+      <div id="designImages"></div>
+      <!-- Container for images -->
+    </div>
+
+    <script>
+      // Fetch the image URLs from localStorage
+      const images = JSON.parse(localStorage.getItem("designImages")) || [];
+
+      const designImagesContainer = document.getElementById("designImages");
+
+      if (images.length > 0) {
+        // Loop through the images and create img elements
+        images.forEach((imageUrl) => {
+          const img = document.createElement("img");
+          img.src = `../Asset/${imageUrl}`; // Set image source
+          img.alt = "House Design"; // Alt text for accessibility
+          designImagesContainer.appendChild(img); // Append image to container
+        });
+      } else {
+        // If no images are found, display a message
+        designImagesContainer.innerHTML = "<p>No designs found.</p>";
+      }
+    </script>
+  </body>
+</html>

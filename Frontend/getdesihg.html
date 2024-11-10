@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get House Design</title>
+    <style>
+      /* General Styling */
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://source.unsplash.com/1600x900/?architecture,home")
+            no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        padding-left: 40px; /* Space for icons */
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus,
+      select:focus {
+        border-color: #ff6600;
+        box-shadow: 0 0 8px rgba(255, 102, 0, 0.3);
+        outline: none;
+      }
+
+      /* Icons Styling */
+      .icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #ff6600;
+      }
+
+      /* Button Styling */
+      button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(45deg, #ff6600, #ff8533);
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        background: linear-gradient(45deg, #ff8533, #ff6600);
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+    <script defer src="getdesign.js"></script>
+  </head>
+  <body style="background-image:url(../Asset/form\ background.jpg) ;">
+    <div class="form-container">
+      <h2>Get Your House Design</h2>
+      <form class="getDesign">
+        <!-- Square Feet -->
+        <div class="form-group">
+          <label for="square-feet">Square Feet</label>
+          <span class="icon">🏠</span>
+          <select id="square-feet" name="square-feet" required>
+            <option value="" disabled selected>Select square feet range</option>
+            <option value="500-1000">500-1000</option>
+            <option value="1000-1500">1000-1500</option>
+            <option value="1500-2000">1500-2000</option>
+            <option value="2000-2500">2000-2500</option>
+            <option value="2500-3000">2500-3000</option>
+          </select>
+        </div>
+
+        <!-- Facing of Building -->
+        <div class="form-group">
+          <label for="facing">Facing</label>
+          <span class="icon">🧭</span>
+          <select id="facing" name="facing" required>
+            <option value="" disabled selected>Select Facing</option>
+            <option value="north">North</option>
+            <option value="south">South</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+          </select>
+        </div>
+
+        <!-- Number of Floors -->
+        <div class="form-group">
+          <label for="floors">Number of Floors</label>
+          <span class="icon">🏢</span>
+          <input
+            type="number"
+            id="floors"
+            name="floors"
+            min="1"
+            max="10"
+            placeholder="Enter number of floors"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">Get Design</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
